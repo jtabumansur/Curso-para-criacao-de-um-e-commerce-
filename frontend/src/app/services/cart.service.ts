@@ -43,6 +43,10 @@ export class CartService {
     return this.cartSubject.asObservable();
   }
 
+  getCart():Cart{
+    return this.cartSubject.value;
+  }
+
   private setCartToLocalStorage(): void{
     this.cart.totalPrice = this.cart.items.reduce((prevSum, currentItem) => prevSum +currentItem.price , 0)//Funcao para somar todos os itens, o 0 no final e o default
     this.cart.totalCount = this.cart.items.reduce((prevSum, currentItem) => prevSum +currentItem.quantity , 0)

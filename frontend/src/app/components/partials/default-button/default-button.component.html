@@ -1,0 +1,14 @@
+<div class="container">
+  <button
+    [ngStyle]="{
+      color: color,
+      'background': bgColor,
+      'font-size.rem': fontSizeRem,
+      'width.rem':widthRem
+    }"
+    [type]="type"
+    (click)="onClick.emit()">
+    {{text}}
+  </button>
+</div>
+<!-- To use "-" inside the javascript it is necessary to enclose it within ' ', to passa units use .unit ex size.px, size.re  -->
